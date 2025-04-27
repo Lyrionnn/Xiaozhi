@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+langchain4j:
+  open-ai:
+    chat-model:
+      api-key: ${API_KEY}
+      model-name: deepseek-chat
+      #请求和响应日志
+      log-requests: true
+      log-responses: true
+      base-url: https://api.deepseek.com/v1
+
+logging:
+  level:
+    root: debug
+
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/chat_memory_db
+
