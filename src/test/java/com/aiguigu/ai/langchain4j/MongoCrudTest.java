@@ -1,6 +1,7 @@
 package com.aiguigu.ai.langchain4j;
 
 
+import com.atiguigu.java.ai.langchain4j.XiaozhiApp;
 import com.atiguigu.java.ai.langchain4j.bean.ChatMessges;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +11,7 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.mongodb.core.query.Update;
 
-@SpringBootTest(classes = MongoCrudTest.class)
+@SpringBootTest(classes = XiaozhiApp.class)
 public class MongoCrudTest {
 
     @Autowired
@@ -32,13 +33,13 @@ public class MongoCrudTest {
 
     @Test
     public void find(){
-        ChatMessges messages = mongoTemplate.findById("", ChatMessges.class);
+        ChatMessges messages = mongoTemplate.findById("680efeb64f7bc2042728a46f", ChatMessges.class);
         System.out.println(messages);
     }
 
     @Test
     public void update(){
-        Criteria criteria = Criteria.where("_id").is("");
+        Criteria criteria = Criteria.where("_id").is("680efeb64f7bc2042728a46f");
         Query query = new Query(criteria);
         Update update = new Update();
         update.set("content", "新的聊天记录列表");

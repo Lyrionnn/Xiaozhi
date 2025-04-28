@@ -4,13 +4,17 @@ server:
 langchain4j:
   open-ai:
     chat-model:
-      api-key: ${API_KEY}
+      api-key: ${DEEP_SEEK_API_KEY}
       model-name: deepseek-chat
       #请求和响应日志
       log-requests: true
       log-responses: true
       base-url: https://api.deepseek.com/v1
-
+  community:
+    dashscope:
+      chat-model:
+        api-key: ${DASH_SCOPE_API_KEY}
+        model-name: qwen-max
 logging:
   level:
     root: debug

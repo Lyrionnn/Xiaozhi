@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collection = "chat_messages")
+@Document("chat_messages")
 public class ChatMessges {
 
     /**
