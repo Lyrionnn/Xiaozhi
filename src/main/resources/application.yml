@@ -19,9 +19,19 @@ logging:
   level:
     root: debug
 
-
+# 基本数据流配置
 spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/chat_memory_db
+  datasource:
+    url: jdbc:mysql://localhost:3306/guiguxiaozhi?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.jdbc.Driver
+
+# 开启sql日志打印
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
